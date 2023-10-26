@@ -1,0 +1,5 @@
+name: quarkus-jaeger
+title: Jaeger
+version: dev
+nav:
+  - modules/ROOT/nav.adoc
