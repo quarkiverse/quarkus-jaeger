@@ -1,0 +1,33 @@
+= Quarkus Jaeger
+
+include::./includes/attributes.adoc[]
+
+This extension is consumed by the https://github.com/quarkiverse/quarkus-smallrye-opentracing[Quarkus SmallRye OpenTracing extension].
+
+[IMPORTANT]
+====
+https://quarkus.io/guides/opentelemetry[OpenTelemetry] is the recommended approach to tracing and telemetry for Quarkus.
+
+The SmallRye OpenTracing support is discontinued and this extension is not actively maintained.
+If you are interested in maintaining this extension, please reach out to us in the https://github.com/quarkiverse/quarkus-jaeger/issues[GitHub issues] of this extension.
+====
+
+== Installation
+
+If you want to use this extension, you need to add the `io.quarkiverse.jaeger:quarkus-jaeger` extension first to your build file.
+
+For instance, with Maven, add the following dependency to your POM file:
+
+[source,xml,subs=attributes+]
+----
+<dependency>
+    <groupId>io.quarkiverse.jaeger</groupId>
+    <artifactId>quarkus-jaeger</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+[[extension-configuration-reference]]
+== Extension Configuration Reference
+
+include::includes/quarkus-jaeger.adoc[leveloffset=+1, opts=optional]
