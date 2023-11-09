@@ -1,6 +1,5 @@
 package io.quarkus.jaeger.deployment;
 
-import io.quarkus.deployment.Feature;
 import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 
@@ -9,7 +8,7 @@ public class JaegerAlwaysEnabledProcessor {
 
     @BuildStep
     public FeatureBuildItem build() {
-        return new FeatureBuildItem(Feature.JAEGER);
+        return new FeatureBuildItem(JaegerProcessor.FEATURE);
     }
 
 }

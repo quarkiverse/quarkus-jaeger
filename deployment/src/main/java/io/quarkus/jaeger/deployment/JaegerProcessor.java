@@ -3,7 +3,6 @@ package io.quarkus.jaeger.deployment;
 import java.util.Optional;
 
 import io.jaegertracing.internal.JaegerTracer;
-import io.quarkus.deployment.Feature;
 import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.annotations.BuildSteps;
 import io.quarkus.deployment.annotations.ExecutionTime;
@@ -21,6 +20,8 @@ import io.quarkus.runtime.metrics.MetricsFactory;
 
 @BuildSteps(onlyIf = JaegerEnabled.class)
 public class JaegerProcessor {
+
+    static final String FEATURE = "jaeger";
 
     @BuildStep(onlyIf = NativeOrNativeSourcesBuild.class)
     @Record(ExecutionTime.STATIC_INIT)
@@ -45,7 +46,7 @@ public class JaegerProcessor {
         }
 
         // Indicates that this extension would like the SSL support to be enabled
-        return new ExtensionSslNativeSupportBuildItem(Feature.JAEGER.getName());
+        return new ExtensionSslNativeSupportBuildItem(FEATURE);
     }
 
     @BuildStep
