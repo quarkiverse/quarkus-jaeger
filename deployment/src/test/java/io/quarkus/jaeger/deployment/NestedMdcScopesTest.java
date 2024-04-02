@@ -1,4 +1,4 @@
-package io.quarkus.jaeger.test;
+package io.quarkus.jaeger.deployment;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;

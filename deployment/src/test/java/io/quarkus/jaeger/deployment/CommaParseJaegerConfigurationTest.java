@@ -1,11 +1,11 @@
-package io.quarkus.jaeger.test;
+package io.quarkus.jaeger.deployment;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import jakarta.inject.Inject;
+import javax.inject.Inject;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
